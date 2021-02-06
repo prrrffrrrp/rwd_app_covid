@@ -1,3 +1,17 @@
+/* animation */
+:root{
+  --blue: #007bff;
+  --purple: #6f42c1;
+  --orange: #fd7e14;
+  --darkgolden: #be9e03;
+  --darkturquoise: #029fcf;
+}
+.logo{
+  animation: logo-run 5s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+html{
+  scroll-behavior: smooth;
+}
 /*============= SECTION =============*/
 .navbar {
   text-transform: uppercase;
@@ -15,9 +29,20 @@
 .navbar .navbar-nav .nav-link {
   color: #fff;
   padding-top: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(64deg, var(--darkgolden), var(--purple), var(--orange), var(--purple), var(--blue), var(--darkturquoise) 50%, white 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
 }
 .navbar .navbar-nav .nav-link:hover {
-  color: goldenrod;
+  background-position: 0 100%;
+  animation: gradient 5s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
 }
 .home-inner {
   background-image: url(./img/computers.png);
@@ -86,6 +111,18 @@ footer a:hover,
 footer p,
 footer h3 {
   color: black;
+}
+
+@keyframes gradient {
+  0%{background-position:0% 58%}
+  50%{background-position:100% 43%}
+  100%{background-position:0% 58%}
+}
+@keyframes logo-run{
+  0%{transform: scale(1.5);}
+  50%{
+    transform: scale(2.5);}
+  100%{transform: scale(1);}
 }
 /* .narrow {
   width: 75%;
