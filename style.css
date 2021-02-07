@@ -12,19 +12,30 @@
 html{
   scroll-behavior: smooth;
 }
-/*============= SECTION =============*/
-.navbar {
-  text-transform: uppercase;
-  background-color: #000;
-  font-weight: bold;
-  font-size: 0.9rem;
-  letter-spacing: 0.1rem;
+.col-sm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
 }
-.navbar-brand > img {
-  height: 1.8rem;
+.gradient-hover{
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to right, var(--darkgolden), var(--purple), var(--orange), var(--purple), var(--blue) 50%, white 50%);
+  background-clip: border-box;
+  -webkit-background-clip: border-box;;
+  -webkit-text-fill-color: black;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease-in-out;
+  min-width: 240px;
+  border: 1px solid black;
 }
-.navbar-nav .nav-item {
-  padding-right: 0.5rem;
+
+.gradient-hover:hover{
+  background-position: 0 100%;
+  animation: gradient 5s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
 }
 .navbar .navbar-nav .nav-link {
   color: #fff;
@@ -44,6 +55,34 @@ html{
   background-position: 0 100%;
   animation: gradient 5s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
 }
+@keyframes gradient {
+  0%{background-position:0% 58%}
+  50%{background-position:100% 43%}
+  100%{background-position:0% 58%}
+}
+
+@keyframes logo-run{
+  0%{transform: scale(1.5);}
+  50%{
+    transform: scale(2.5);}
+  100%{transform: scale(1);}
+}
+
+/*============= SECTION =============*/
+.navbar {
+  text-transform: uppercase;
+  background-color: #000;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+.navbar-brand > img {
+  height: 1.8rem;
+}
+.navbar-nav .nav-item {
+  padding-right: 0.5rem;
+}
+
 .home-inner {
   background-image: url(./img/computers.png);
   background-size: contain;
@@ -113,17 +152,7 @@ footer h3 {
   color: black;
 }
 
-@keyframes gradient {
-  0%{background-position:0% 58%}
-  50%{background-position:100% 43%}
-  100%{background-position:0% 58%}
-}
-@keyframes logo-run{
-  0%{transform: scale(1.5);}
-  50%{
-    transform: scale(2.5);}
-  100%{transform: scale(1);}
-}
+
 /* .narrow {
   width: 75%;
   margin: 1.5rem auto;
