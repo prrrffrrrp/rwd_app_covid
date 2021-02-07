@@ -99,6 +99,15 @@ footer p,
 footer h3 {
   color: black;
 }
+
+/* form */
+
+form {
+  padding: 2rem 4rem;
+}
+
+ 
+
 /* .narrow {
   width: 75%;
   margin: 1.5rem auto;
