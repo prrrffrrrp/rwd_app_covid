@@ -152,6 +152,10 @@ footer h3 {
   color: black;
 }
 
+form {
+  padding: 2rem 4rem;
+}
+
 
 /* .narrow {
   width: 75%;
