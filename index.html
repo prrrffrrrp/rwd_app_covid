@@ -135,17 +135,28 @@
 		</div>
 <!-- Form -->
     <div>
-      <form id="vaccine">
+      <form id="vaccine" class="needs-validation" novalidate>
         <h3 class="heading text-center">Zgłoś się na szczepienie</h3>
         <div class="form-row">
           <div class="col-md-6">
             <label for="inputName">Imię</label>
             <input type="text" class="form-control" id="inputName" required/>
-           
+            <div class="valid-feedback">
+              OK!
+            </div>
+            <div class="invalid-feedback">
+              Podaj imię
+            </div>
           </div>
           <div class="col-md-6">
             <label for="inputLastName">Nazwisko</label>
             <input type="text" class="form-control" id="inputLastName" required/>
+            <div class="valid-feedback">
+              OK!
+            </div>
+            <div class="invalid-feedback">
+              Podaj nazwisko
+            </div>
           </div>
         </div>
 
@@ -153,25 +164,55 @@
           <div class="form-group col-md-6">
             <label for="inputDate">Data urodzenia</label>
             <input type="date" class="form-control" id="inputDate" required/>
+            <div class="valid-feedback">
+              OK!
+            </div>
+            <div class="invalid-feedback">
+              Podaj datę urodzenia
+            </div>
           </div>
           <div class="form-group col-md-6">
             <label for="inputMobile">Numer telefonu</label>
             <input type="tel" class="form-control" id="inputMobile" required/>
+            <div class="valid-feedback">
+              OK!
+            </div>
+            <div class="invalid-feedback">
+              Podaj numer telefonu
+            </div>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputCity">Miasto</label>
+            <label for="inputCity">Miejsowość</label>
             <input type="text" class="form-control" id="inputCity" required/>
+            <div class="valid-feedback">
+              OK!
+            </div>
+            <div class="invalid-feedback">
+              Podaj miejscowość
+            </div>            
           </div>
           <div class="form-group col-md-2">
             <label for="inputZip">Kod</label>
             <input type="text" class="form-control" id="inputZip" required/>
+            <div class="valid-feedback">
+              OK!
+            </div>
+            <div class="invalid-feedback">
+              Podaj kod
+            </div>
           </div>
           <div class="form-group col-md-4">
             <label for="inputEmail">E-mail</label>
-            <input type="email" class="form-control" id="inputEmail" />
+            <input type="email" class="form-control" id="inputEmail" required />
+            <div class="valid-feedback">
+              OK!
+            </div>
+            <div class="invalid-feedback">
+              Podaj e-mail
+            </div>
           </div>
         </div>
         <fieldset class="form-group row">
@@ -236,5 +277,7 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
+
