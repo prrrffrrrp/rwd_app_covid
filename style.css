@@ -83,13 +83,21 @@ html{
   padding-right: 0.5rem;
 }
 
+.landing {
+    position: relative;
+    width: 100%;
+    max-height: 40vh;
+    display: table;
+    z-index: -1;
+}
+
 .caption {
   width: 100%;
   max-width: 100%;
   position: absolute;
   top: 40%;
   text-transform: uppercase;
-  color: #fff;
+  color: #eee;
   z-index: 1;
 }
 
