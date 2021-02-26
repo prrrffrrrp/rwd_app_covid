@@ -83,10 +83,6 @@ html{
   padding-right: 0.5rem;
 }
 
-.home-inner {
-  background-image: url(./img/computers.png);
-  background-size: contain;
-}
 .caption {
   width: 100%;
   max-width: 100%;
@@ -96,6 +92,7 @@ html{
   color: #fff;
   z-index: 1;
 }
+
 .caption h1 {
   font-size: 2rem;
   font-weight: bold;
